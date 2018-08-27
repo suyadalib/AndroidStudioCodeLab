@@ -9,3 +9,4 @@ https://codelabs.developers.google.com/codelabs/android-room-with-a-view
 5. Create the DAO
 6. The LiveData class
 7. Add a Room database
+8. Create the Repository
