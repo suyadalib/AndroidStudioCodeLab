@@ -17,7 +17,7 @@ public class Word {
     @ColumnInfo(name = "word")
     private String mWord;
 
-    public String getmWord() {
+    public String getWord() {
         return mWord;
     }
 

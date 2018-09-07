@@ -9,7 +9,7 @@ import com.example.suyadalib.roomwordsample.dao.WordDao;
 import com.example.suyadalib.roomwordsample.entities.Word;
 
 @Database(entities = {Word.class}, version = 1)
-public abstract class WordRoomDatabase extends RoomDatabase{
+public abstract class WordRoomDatabase extends RoomDatabase {
     public abstract WordDao wordDao();
 
     private static WordRoomDatabase INSTANCE;
