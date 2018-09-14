@@ -10,8 +10,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        TextView tvHello = (TextView) findViewById(R.id.tvHello);
-        tvHello.setText("Yeah");
     }
 }
