@@ -12,7 +12,7 @@
         android:id="@+id/tvHello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World" />
+        android:text="@string/app_name" />
 
     <EditText
         android:visibility="gone"
@@ -73,7 +73,7 @@
         android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculate"/>
+        android:text="@string/calculate"/>
 
     <CheckBox
         android:id="@+id/chkAgree"
@@ -93,19 +93,19 @@
             android:id="@id/rbPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
             android:text="+"/>
         <RadioButton
             android:id="@+id/rbMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
             android:text="-"/>
         <RadioButton
             android:id="@+id/rbMultiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
             android:text="*"/>
         <RadioButton
             android:id="@+id/rbDivide"
@@ -116,8 +116,13 @@
     </RadioGroup>
 
     <ProgressBar
-        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        style="@style/ProgressBarStyle"
         android:indeterminate="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"/>
 </LinearLayout>

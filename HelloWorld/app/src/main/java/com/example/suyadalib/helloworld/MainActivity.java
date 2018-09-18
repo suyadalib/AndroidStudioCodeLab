@@ -1,11 +1,17 @@
 package com.example.suyadalib.helloworld;
 
+import android.graphics.Point;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
+import android.view.Display;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
@@ -14,6 +20,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, TextView.OnEditorActionListener {
 
@@ -41,6 +48,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         initInstances();
+
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;  //screen width
+        int height = size.y; //screen height
+
+        Toast.makeText(MainActivity.this, "Width = " + width + ", Height = " + height, Toast.LENGTH_SHORT).show();
 
     }
 
@@ -79,6 +94,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view == btnCalculate) {
             int result = Calculate();
             tvResult.setText("= " + result);
+            Log.d("[CALCULATION]", "result = " + result);
+            Toast.makeText(MainActivity.this, "Result = " + result, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -127,5 +144,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         return false;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_settings) {
+            Toast.makeText(MainActivity.this, "Click Settings", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 }
