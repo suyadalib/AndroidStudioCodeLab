@@ -6,123 +6,187 @@
     android:orientation="vertical"
     tools:context="com.example.suyadalib.helloworld.MainActivity">
 
-
-    <TextView
-        android:visibility="gone"
-        android:id="@+id/tvHello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name" />
-
-    <EditText
-        android:visibility="gone"
-        android:inputType="text"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <EditText
-        android:visibility="gone"
-        android:id="@+id/editTextHello"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number" />
 
-    <Button
-        android:visibility="gone"
-        android:id="@+id/btnCopy"
-        android:text="Copy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvHello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name" />
 
-    <!-- Start Hear -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        
-        <EditText
-            android:id="@+id/editNumber1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:inputType="number"
-            android:text="0"
-            />
-        <EditText
-            android:id="@+id/editNumber2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:inputType="number"
-            android:text="0"/>
+            <EditText
+                android:visibility="gone"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/tvResult"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:textSize="20sp"
-            android:text="= 0"/>
-        
-    </LinearLayout>
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/editTextHello"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
 
-    <Button
-        android:id="@+id/btnCalculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/calculate"/>
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnCopy"
+                android:text="Copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <CheckBox
-        android:id="@+id/chkAgree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="I agree"/>
+            <!-- Start Hear -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <RadioGroup
-        android:id="@+id/rgOperator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:checkedButton="@+id/rbPlus">
+                <EditText
+                    android:id="@+id/editNumber1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/ninepatch_lab"
+                    android:text="0"
+                    />
+                <EditText
+                    android:id="@+id/editNumber2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/ninepatch_lab"
+                    android:text="0"/>
 
-        <RadioButton
-            android:id="@id/rbPlus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/radio_button_margin_left"
-            android:text="+"/>
-        <RadioButton
-            android:id="@+id/rbMinus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/radio_button_margin_left"
-            android:text="-"/>
-        <RadioButton
-            android:id="@+id/rbMultiply"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/radio_button_margin_left"
-            android:text="*"/>
-        <RadioButton
-            android:id="@+id/rbDivide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="/"/>
-    </RadioGroup>
+                <TextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:text="= 0"/>
 
-    <ProgressBar
-        style="@style/ProgressBarStyle"
-        android:indeterminate="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"/>
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"/>
+
+            <CheckBox
+                android:id="@+id/chkAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="I agree"/>
+
+            <RadioGroup
+                android:id="@+id/rgOperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/rbPlus">
+
+                <RadioButton
+                    android:id="@id/rbPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/radio_button_margin_left"
+                    android:text="+"/>
+                <RadioButton
+                    android:id="@+id/rbMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/radio_button_margin_left"
+                    android:text="-"/>
+                <RadioButton
+                    android:id="@+id/rbMultiply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/radio_button_margin_left"
+                    android:text="*"/>
+                <RadioButton
+                    android:id="@+id/rbDivide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="/"/>
+            </RadioGroup>
+
+            <ProgressBar
+                style="@style/ProgressBarStyle"
+                android:indeterminate="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--
+            <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+                android:src="@drawable/ic_launcher"
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+                -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_default"
+                    android:src="@drawable/ic_launcher" />
+
+                <ImageButton
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_launcher" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/selector_btn_default"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
