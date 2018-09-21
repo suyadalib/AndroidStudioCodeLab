@@ -1,78 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="@dimen/welcome_logo"
-        android:layout_height="@dimen/welcome_logo"
-        android:src="@drawable/logo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true"
-        >
-        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/welcome_logo"
+            android:layout_height="@dimen/welcome_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/logo" />
+
+        <FrameLayout
             android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_line1"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_line2"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_line3"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:text="@string/welcome_line1"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:text="@string/welcome_line2"/>
+            android:layout_gravity="center"
+            android:background="@drawable/selector_btn_welcome_getstarted"
+            android:padding="@dimen/welcome_button_padding"
+            android:text="@string/welcome_get_started"
+            android:textColor="@color/colorBtnGetStarted"
+            android:textSize="13sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/welcome_skip_padding_bottom"
+            android:paddingTop="@dimen/welcome_skip_padding_top"
+            android:text="@string/welcome_skip"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:text="@string/welcome_line3" />
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/welcome_botton"
+            android:text="@string/welcome_inform_use_and_term"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
     </LinearLayout>
 
-    <Button
-        android:layout_above="@+id/tvSkip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/welcome_button_padding"
-        android:text="@string/welcome_get_started"
-        android:layout_centerInParent="true"
-        android:textColor="@color/colorBtnGetStarted"
-        android:textSize="13sp"
-        android:background="@color/colorBtnWelcomeNormal"/>
-
-    <TextView
-        android:id="@id/tvSkip"
-        android:layout_above="@+id/tvTerm"
-        android:paddingTop="@dimen/welcome_skip_padding_top"
-        android:paddingBottom="@dimen/welcome_skip_padding_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="@string/welcome_skip"
-        android:textSize="14sp"
-        android:textColor="@android:color/white"/>
-
-    <TextView
-        android:id="@id/tvTerm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="@string/welcome_inform_use_and_term"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        android:textAlignment="center"
-        android:paddingBottom="@dimen/welcome_botton"/>
 </RelativeLayout>
