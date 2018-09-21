@@ -9,6 +9,7 @@ import android.os.Build;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -16,6 +17,7 @@ public class CustomView extends View {
 
     private boolean isBlue = false;
     private boolean isDown = false;
+    private GestureDetector gestureDetector;
 
     public CustomView(Context context) {
         super(context);
@@ -42,7 +44,43 @@ public class CustomView extends View {
     }
 
     private void init() {
+        gestureDetector = new GestureDetector(getContext(), new GestureDetector.OnGestureListener() {
+            @Override
+            public boolean onDown(MotionEvent motionEvent) {
+                // decide : Care or not?
+                return true;
+            }
 
+            @Override
+            public void onShowPress(MotionEvent motionEvent) {
+                // is called when onDown is true
+            }
+
+            @Override
+            public boolean onSingleTapUp(MotionEvent motionEvent) {
+                // handle action up
+                return false;
+            }
+
+            @Override
+            public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent1
+                                    , float v, float v1) {
+                return false;
+            }
+
+            @Override
+            public void onLongPress(MotionEvent motionEvent) {
+
+            }
+
+            @Override
+            public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1
+                                    , float v, float v1) {
+                isBlue = !isBlue;
+                invalidate();
+                return true;
+            }
+        });
     }
 
     private void initWithAttrs(AttributeSet attrs, int defStyleAttr, int defStyleRes) {
@@ -85,6 +123,9 @@ public class CustomView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        // Pass event to GestureDetector
+        gestureDetector.onTouchEvent(event);
+
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 isDown = true;
