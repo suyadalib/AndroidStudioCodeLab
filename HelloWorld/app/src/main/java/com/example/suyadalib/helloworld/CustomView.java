@@ -48,12 +48,14 @@ public class CustomView extends View {
             @Override
             public boolean onDown(MotionEvent motionEvent) {
                 // decide : Care or not?
+                //getParent().requestDisallowInterceptTouchEvent(true);
                 return true;
             }
 
             @Override
             public void onShowPress(MotionEvent motionEvent) {
                 // is called when onDown is true
+                getParent().requestDisallowInterceptTouchEvent(true);
             }
 
             @Override
@@ -79,6 +81,17 @@ public class CustomView extends View {
                 isBlue = !isBlue;
                 invalidate();
                 return true;
+            }
+        });
+
+        // Enable Click Mode
+        setClickable(true);
+
+        // After this call, if it's not clickable, it will be clickable
+        setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }

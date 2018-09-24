@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -42,6 +43,7 @@
                 android:text="Copy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
 
             <!-- Start Hear -->
             <LinearLayout
@@ -85,6 +87,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/calculate"/>
+
+            <com.rilixtech.materialfancybutton.MaterialFancyButton
+                android:id="@+id/btn_spotify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                fancy:mfb_borderColor="#FFFFFF"
+                fancy:mfb_borderWidth="1dp"
+                fancy:mfb_defaultColor="#7ab800"
+                fancy:mfb_focusColor="#9bd823"
+                fancy:mfb_iconFont="fontawesome.ttf"
+                fancy:mfb_fontIconResource="&#xf04b;"
+                fancy:mfb_iconPosition="left"
+                fancy:mfb_radius="30dp"
+                fancy:mfb_text="SHUFFLE PLAY"
+                fancy:mfb_textColor="#FFFFFF" />
 
             <CheckBox
                 android:id="@+id/chkAgree"
