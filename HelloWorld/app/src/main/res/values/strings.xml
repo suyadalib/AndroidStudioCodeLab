@@ -7,4 +7,6 @@
     <string name="welcome_line2">Clip anything from over</string>
     <string name="welcome_line3">100,000 hot topics</string>
     <string name="welcome_get_started">Get Started</string>
+
+    <string name="button">Button</string>
 </resources>

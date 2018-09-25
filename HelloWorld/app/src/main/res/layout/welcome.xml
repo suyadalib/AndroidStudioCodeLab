@@ -77,8 +77,7 @@
             android:paddingTop="@dimen/welcome_skip_padding_top"
             android:text="@string/welcome_skip"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="14sp" />
+            style="@style/WelcomeTextViewStyle.Green" />
 
         <TextView
             android:layout_width="match_parent"
@@ -87,8 +86,7 @@
             android:paddingBottom="@dimen/welcome_botton"
             android:text="@string/welcome_inform_use_and_term"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="14sp" />
+            style="@style/WelcomeTextViewStyle" />
     </LinearLayout>
 
 </RelativeLayout>

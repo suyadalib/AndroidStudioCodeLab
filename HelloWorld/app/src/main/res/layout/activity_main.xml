@@ -18,11 +18,11 @@
 
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/tvHello"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name" />
+                android:text="@string/app_name"
+                style="@style/TextViewStyle"/>
 
             <EditText
                 android:visibility="gone"
@@ -151,6 +151,21 @@
                 android:indeterminate="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <include layout="@layout/sample_bar" />
+
+
+            <com.example.suyadalib.helloworld.CustomViewGroup
+                android:id="@+id/viewGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <com.example.suyadalib.helloworld.CustomViewGroup
+                android:id="@+id/viewGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
 
             <com.example.suyadalib.helloworld.CustomView
                 android:layout_width="match_parent"
