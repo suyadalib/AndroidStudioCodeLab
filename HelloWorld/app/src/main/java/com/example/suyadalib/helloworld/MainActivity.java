@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     RadioGroup rgOperator;
 
+    CustomViewGroup viewGroup1;
+    CustomViewGroup viewGroup2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initInstances() {
         tvHello = (TextView) findViewById(R.id.tvHello);
         tvHello.setMovementMethod(LinkMovementMethod.getInstance());
-        tvHello.setText(Html.fromHtml("<b>Hello</b> <i>World</i> <a href=\"https://www.github.com/suyadalib\">my github</a>"));
+        //tvHello.setText(Html.fromHtml("<b>Hello</b> <i>World</i> <a href=\"https://www.github.com/suyadalib\">my github</a>"));
 
         editTextHello = (EditText) findViewById(R.id.editTextHello);
         editTextHello.setOnEditorActionListener(this);
@@ -83,6 +86,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        rbMultiply = (RadioButton) findViewById(R.id.rbMultiply);
 //        rbDivide = (RadioButton) findViewById(R.id.rbDivide);
         rgOperator = (RadioGroup) findViewById(R.id.rgOperator);
+
+
+        // Custom View Group
+        viewGroup1 = (CustomViewGroup) findViewById(R.id.viewGroup1);
+        viewGroup2 = (CustomViewGroup) findViewById(R.id.viewGroup2);
+
+        viewGroup1.setButtonText("Hello");
+        viewGroup2.setButtonText("World");
 
     }
 
