@@ -28,7 +28,6 @@ public class SecondActivity extends AppCompatActivity {
 
         CoordinateParcelable c3 = intent.getParcelableExtra("cParcelable");
 
-
         initInstance();
     }
 
