@@ -1,5 +1,6 @@
 package com.example.suyadalib.helloworld;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -107,6 +108,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tvResult.setText("= " + result);
             Log.d("[CALCULATION]", "result = " + result);
             Toast.makeText(MainActivity.this, "Result = " + result, Toast.LENGTH_LONG).show();
+
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.putExtra("result", result);
+            startActivity(intent);
         }
     }
 
