@@ -78,7 +78,8 @@
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"
                     android:textSize="20sp"
-                    android:text="= 0"/>
+                    android:text="= 0"
+                    android:freezesText="true"/>
 
             </LinearLayout>
 
@@ -168,11 +169,13 @@
 
 
             <com.example.suyadalib.helloworld.CustomView
+                android:id="@+id/view1"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:layout_weight="1"/>
 
             <com.example.suyadalib.helloworld.CustomView
+                android:id="@+id/view2"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:layout_weight="1"

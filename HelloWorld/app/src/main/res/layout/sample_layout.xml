@@ -11,7 +11,7 @@
         android:text="@string/button"/>
 
     <EditText
-        android:id="@+id/editTextCustomViewGroupHello"
+        android:id="@+id/editTextSample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/default_margin"

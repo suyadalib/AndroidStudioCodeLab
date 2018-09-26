@@ -63,6 +63,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        // Save thing(s) here
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore thing(s) here
+
+    }
+
     private void initInstances() {
         tvHello = (TextView) findViewById(R.id.tvHello);
         tvHello.setMovementMethod(LinkMovementMethod.getInstance());
@@ -138,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-            startActivity(intent);
+            //startActivity(intent);
         }
     }
 
