@@ -95,7 +95,7 @@ public class CustomViewGroup extends FrameLayout {
         super.onRestoreInstanceState(savedState.getSuperState());
 
         // Restore SparseArray
-        Bundle childrenStates = savedState.getBundle().getBundle("childrenState");
+        Bundle childrenStates = savedState.getBundle().getBundle("childrenStates");
         // Restore children's state
         for (int i = 0; i < getChildCount(); i++) {
             int id = getChildAt(i).getId();
