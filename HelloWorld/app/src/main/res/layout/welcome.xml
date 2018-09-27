@@ -9,7 +9,12 @@
         android:scaleType="centerCrop"
         android:src="@drawable/bg"/>
 
-    <LinearLayout
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -56,6 +61,11 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"/>
             </LinearLayout>
 
         </FrameLayout>
@@ -87,6 +97,13 @@
             android:text="@string/welcome_inform_use_and_term"
             android:textAlignment="center"
             style="@style/WelcomeTextViewStyle" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"/>
+
     </LinearLayout>
 
+    </ScrollView>
 </RelativeLayout>
