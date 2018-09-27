@@ -3,13 +3,19 @@ package com.example.suyadalib.helloworld;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
 
     int sum = 0;
+
     TextView tvSummary;
+    Button btnOK;
+
     Bundle bundle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +41,16 @@ public class SecondActivity extends AppCompatActivity {
         tvSummary = (TextView) findViewById(R.id.tvSummary);
         tvSummary.setText("Result = " + sum);
 
+        btnOK= (Button) findViewById(R.id.btnOK);
+        btnOK.setOnClickListener(this);
 
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        if (view == btnOK) {
+            finish();
+        }
     }
 }
