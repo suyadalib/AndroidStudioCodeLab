@@ -50,7 +50,6 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
-
     @Override
     public void onClick(View view) {
         if (view == btnOK) {
@@ -59,5 +58,11 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             setResult(RESULT_OK, retIntent);
             finish();
         }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }

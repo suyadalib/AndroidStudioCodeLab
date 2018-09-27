@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
 
-        setContentView(R.layout.welcome);
+        setContentView(R.layout.activity_main);
 
-        //initInstances();
+        initInstances();
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -184,6 +184,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("cParcelable", c3);
 
             startActivityForResult(intent, REQUEST_CODE_SECOND);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
         }
     }
