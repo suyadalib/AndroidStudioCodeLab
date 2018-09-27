@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
@@ -12,6 +13,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     int sum = 0;
 
     TextView tvSummary;
+    EditText editTextResult;
     Button btnOK;
 
     Bundle bundle;
@@ -41,6 +43,8 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         tvSummary = (TextView) findViewById(R.id.tvSummary);
         tvSummary.setText("Result = " + sum);
 
+        editTextResult = (EditText) findViewById(R.id.editTextResult);
+
         btnOK= (Button) findViewById(R.id.btnOK);
         btnOK.setOnClickListener(this);
 
@@ -50,6 +54,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         if (view == btnOK) {
+            Intent retIntent = new Intent();
+            retIntent.putExtra("result", editTextResult.getText().toString());
+            setResult(RESULT_OK, retIntent);
             finish();
         }
     }

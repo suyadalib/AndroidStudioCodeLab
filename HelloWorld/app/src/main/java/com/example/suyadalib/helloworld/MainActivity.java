@@ -3,6 +3,7 @@ package com.example.suyadalib.helloworld;
 import android.content.Intent;
 import android.graphics.Point;
 import android.provider.MediaStore;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -24,6 +25,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, TextView.OnEditorActionListener {
+
+    private static int REQUEST_CODE_SECOND = 123;
 
     TextView tvHello;
     EditText editTextHello;
@@ -174,10 +177,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             c3.z = 20;
             intent.putExtra("cParcelable", c3);
 
+            startActivityForResult(intent, REQUEST_CODE_SECOND);
+
+        }
+    }
 
 
-
-            startActivity(intent);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_SECOND) {
+            if (resultCode == RESULT_OK) {
+                // Get data from data's Extra
+                String result = data.getStringExtra("result");
+                Toast.makeText(MainActivity.this, "Result is " + result, Toast.LENGTH_LONG).show();
+            }
         }
     }
 
